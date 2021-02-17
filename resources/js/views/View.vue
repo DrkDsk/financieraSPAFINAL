@@ -2,14 +2,16 @@
     <v-app>
         <v-navigation-drawer 
         app 
-        color="#006064" 
+        color="#0D47A1"
         absolute
         :value="drawerOpen"
         dark>
         <navigation></navigation>
         </v-navigation-drawer>
 
-        <v-app-bar app color="#78909C">
+        <v-app-bar app 
+        dark
+        color="#1565C0">
             <v-app-bar-nav-icon @click="drawerToggle"></v-app-bar-nav-icon>
             <v-toolbar-title>
                 Financiera
@@ -40,7 +42,6 @@
                 <router-view></router-view>
             </v-container>
         </v-content>
-        <v-footer app></v-footer>
     </v-app>
 </template>
 
