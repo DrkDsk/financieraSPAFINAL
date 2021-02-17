@@ -32,7 +32,7 @@
                                 <v-col class="display-3" cols="6">
                                     {{this.numeroClientes}}
                                 </v-col>
-                                <v-list-item-subtitle class="text-right">Clientes Totales</v-list-item-subtitle>
+                                <v-list-item-subtitle class="text-right">Préstamos Totales</v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
                     </v-card>
@@ -48,7 +48,7 @@
                                 <v-col class="display-3" cols="6">
                                     {{this.numeroClientes}}
                                 </v-col>
-                                <v-list-item-subtitle class="text-right">Clientes Totales</v-list-item-subtitle>
+                                <v-list-item-subtitle class="text-right">Abonos Totales</v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
                     </v-card>
