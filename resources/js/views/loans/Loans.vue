@@ -35,7 +35,6 @@
             </template>
 
             <template v-slot:item.actions="{ item }">
-                
                 <v-btn
                 color="error"
                 fab
