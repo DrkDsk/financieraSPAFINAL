@@ -35,18 +35,30 @@
             </template>
 
             <template v-slot:item.actions="{ item }">
-                <v-icon 
+                
+                <v-btn
+                color="error"
+                fab
                 small
-                @click="deleteLoan(item.id)">
-                mdi-delete
-                </v-icon>
-
-                <v-icon
-                small
-                class="mr-2"
-                @click="editModal(item)">
-                mdi-pencil
-                </v-icon>
+                dark>
+                    <v-icon 
+                    small
+                    @click="deleteLoan(item.id)">
+                    mdi-delete
+                    </v-icon>
+                </v-btn>
+                
+                <v-btn
+                    color="primary"
+                    fab
+                    small
+                    dark>
+                    <v-icon
+                    small
+                    @click="editModal(item)">
+                    mdi-pencil
+                    </v-icon>
+                </v-btn>
             </template>
             </v-data-table>
         </v-card>

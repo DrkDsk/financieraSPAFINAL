@@ -14,37 +14,54 @@
                         vertical
                     ></v-divider>
 
-                    <v-btn 
-                        color="primary"
-                        dark
-                        class="mb-2"
-                        @click="newClientModal()">
-                        Nuevo Cliente
-                    </v-btn>
-                    <v-spacer></v-spacer>
+                    <v-row justify="center">
+                        <v-col md="6">
+                            <v-btn 
+                                color="primary"
+                                dark
+                                class="mb-2"
+                                @click="newClientModal()">
+                                Nuevo Cliente
+                            </v-btn>
+                        </v-col>
+                        <v-spacer></v-spacer>
 
-                    <v-btn 
-                        color="#388E3C"
-                        dark
-                        class="mb-2"
-                        @click="openImportar = true">
-                        Importar Clientes de Excel
-                    </v-btn>
+                        <v-col md="6">
+                            <v-btn 
+                            color="#388E3C"
+                            dark
+                            class="mb-2"
+                            @click="openImportar = true">
+                            Importar Clientes de Excel
+                        </v-btn>
+                        </v-col>
+                    </v-row>
                 </v-toolbar>
             </template>
                 
             <template v-slot:item.actions="{ item }">
-                <v-icon
+                <v-btn
+                color="primary"
+                fab
                 small
-                @click="editModal(item)">
-                mdi-pencil
-                </v-icon>
+                dark>
+                    <v-icon
+                    small
+                    @click="editModal(item)">
+                    mdi-pencil
+                    </v-icon>
+                </v-btn>
 
-                <v-icon
-                small
-                @click="deleteClient(item.id)">
-                mdi-delete
-                </v-icon>
+                <v-btn
+                color="error"
+                fab
+                small>
+                    <v-icon
+                    small
+                    @click="deleteClient(item.id)">
+                    mdi-delete
+                    </v-icon>
+                </v-btn>
             </template>        
             </v-data-table>
         </v-card>        
@@ -128,7 +145,6 @@
             </v-card>
         </v-dialog>
         </v-row>
-        
     </div>
 </template>
 
