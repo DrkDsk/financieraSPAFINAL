@@ -27,10 +27,9 @@
             </template>
 
             <template v-slot:item.actions="{ item }">
-                <v-btn icon :to="{name: 'details',params:{id:item.id}}">
+                <v-btn color="info" icon :to="{name: 'details',params:{id:item.id}}">
                     <v-icon
                     small
-                    class="mr-2"
                     >
                     mdi-eye
                     </v-icon>
