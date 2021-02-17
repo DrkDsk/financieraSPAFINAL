@@ -71,7 +71,8 @@
             </v-col>
         </v-card>
         
-        <v-dialog v-model="addClientDialog" width="500" height="500">
+        <v-row justify="center">
+            <v-dialog v-model="addClientDialog" width="500" height="500">
             <v-card>
                 <v-card-title>{{titulo}}</v-card-title>
                     <v-form class="px-4">
@@ -107,7 +108,7 @@
                     
                 <v-card-actions>
                     <v-btn
-                    color="#388E3C"
+                    color="success"
                     class="mr-4"
                     @click="editmode ? editClient() : addClient()">
                     Guardar
@@ -126,6 +127,8 @@
                 <p class="typo__p" v-if="submitStatus === 'PENDING'">Creando...</p>
             </v-card>
         </v-dialog>
+        </v-row>
+        
     </div>
 </template>
 
