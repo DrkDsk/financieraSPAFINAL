@@ -135,7 +135,7 @@
                                     <v-date-picker v-model="$v.form.fecha_de_ministro.$model"
                                     prepend-icon="mdi-calendar"
                                     ref="fecha_ministro"
-                                    @change="toDate">
+                                    @change="toDate()">
                                     {{this.form.fecha_de_ministro}}
                                     </v-date-picker>
 
@@ -160,7 +160,7 @@
                         <v-spacer></v-spacer>
                         <v-btn
                         :disabled="submitStatus === 'PENDING'"
-                        color="#388E3C"
+                        color="success"
                         class="mr-4"
                         @click="editmode ? editLoan() : addLoan()">
                         Guardar
@@ -398,31 +398,50 @@ export default {
             if(!isNaN(cuota) && cuota !==0) this.form.numero_de_pagos = porcentaje / cuota;
         },
         toDate(){
-            var format = this.form.fecha_de_ministro.split('-');
+            var format = this.form.fecha_de_ministro.split('-')
             var date = new Date(format[0],format[1]-1,format[2])
             var dias = parseInt(this.form.numero_de_pagos)
             var i = 0;
             
-            date.setDate(date.getDate()+1)
-            console.log("fecha: "+date)
+            var weekendDay = verifyWeekend(date,date.getDay())
+            
+            console.log("date:");
+            console.log(date.setDate(weekendDay))
             
             if(dias){
                 while(i !== dias){
-                    if(date.getDay() == 0 || date.getDay() == 6) date.setDate(date.getDate()+1)
+                    if(date.getDay() == 0 || date.getDay() == 6) {
+                        date.setDate(date.getDate()+1)
+                    }
                     else{
                         date.setDate(date.getDate()+1)
                         i++
                     }
                 }
-            } 
+            }
 
-            date.setDate(date.getDate()-1)
+            var weekendDay = verifyWeekend(date,date.getDay())
+        
+            date.setDate(weekendDay)
             
             var anio = date.getFullYear()
             var mes = '0' + (date.getMonth()+1)
             var dia = ("0" + date.getDate()).slice(-2)
             var fecha = anio + '-' + mes + '-' + dia
             this.form.fecha_de_vencimiento = fecha            
+        },
+        verifyWeekend(date, day){
+            if(day == 0 || day == 6){
+                if(day == 0){
+                    console.log('domingo')
+                    date.setDate(date.getDate()+1)
+                }
+                else if (day == 6){
+                    console.log('sabado')
+                    date.setDate(date.getDate()+2)
+                }
+            }
+            return date.getDate()
         }
     }
 }
