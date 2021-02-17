@@ -1,17 +1,60 @@
 <template>
-    <v-card 
-    class="mx-left"
-    max-width="250"
-    shaped>
-        <v-list-item three-line>
-            <v-icon x-large>mdi-account</v-icon>
-            <v-list-item-content>
-                <v-col class="display-3" cols="6">
-                    {{this.numeroClientes}}
+    <v-card
+        light
+        class="mx-auto">
+        <v-container fluid>
+            <v-row justify="center">
+                <v-col md="4">
+                    <v-card
+                    dark
+                    class="mx-left"
+                    color="#0c2141">
+                        <v-list-item three-line>
+                            <v-icon x-large>mdi-account</v-icon>
+                            <v-list-item-content>
+                                <v-col class="display-3" cols="6">
+                                    {{this.numeroClientes}}
+                                </v-col>
+                                <v-list-item-subtitle class="text-right">Clientes Totales</v-list-item-subtitle>
+                            </v-list-item-content>
+                        </v-list-item>
+                    </v-card>
                 </v-col>
-                <v-list-item-subtitle class="text-right">Clientes Totales</v-list-item-subtitle>
-            </v-list-item-content>
-        </v-list-item>
+
+                <v-col md="4">
+                    <v-card
+                    dark
+                    class="mx-left"
+                    color="#1F7087">
+                        <v-list-item three-line>
+                            <v-icon x-large>mdi-account</v-icon>
+                            <v-list-item-content>
+                                <v-col class="display-3" cols="6">
+                                    {{this.numeroClientes}}
+                                </v-col>
+                                <v-list-item-subtitle class="text-right">Clientes Totales</v-list-item-subtitle>
+                            </v-list-item-content>
+                        </v-list-item>
+                    </v-card>
+                </v-col>
+                <v-col md="4">
+                    <v-card
+                    dark
+                    class="mx-left"
+                    color="#1F7087">
+                        <v-list-item three-line>
+                            <v-icon x-large>mdi-account</v-icon>
+                            <v-list-item-content>
+                                <v-col class="display-3" cols="6">
+                                    {{this.numeroClientes}}
+                                </v-col>
+                                <v-list-item-subtitle class="text-right">Clientes Totales</v-list-item-subtitle>
+                            </v-list-item-content>
+                        </v-list-item>
+                    </v-card>
+                </v-col> 
+            </v-row>
+        </v-container>
     </v-card>
 </template>
 
