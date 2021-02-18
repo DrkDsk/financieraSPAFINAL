@@ -31,10 +31,13 @@ _Eliminar Cliente_
   
   ### Agregar Préstamos
   
-  _Creando Préstamo_
+ _Creando Préstamo
 ![creando_prestamos](https://user-images.githubusercontent.com/45542462/108391756-a11ef500-71d7-11eb-8aaa-7cfdb929aea5.png)
 
 ![creando_prestamos_2](https://user-images.githubusercontent.com/45542462/108391792-aa0fc680-71d7-11eb-9cec-c8021eee9dfc.png)
+
+_Préstamo Añadido_
+![prestamo_añadido](https://user-images.githubusercontent.com/45542462/108393280-1808bd80-71d9-11eb-8c65-3e61005b5207.png)
   
   ### Agregar Abonos
   
